@@ -1,0 +1,96 @@
+<!-- 
+<div class="bg-success m-5">
+    <ul class="p-4">
+        <li class="m-5 sub text-decoration-none"><a href="#home">Home</a>
+            <ul class="submenu">
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+            </ul>
+        </li>
+        <li class="m-5 sub"><a href="#news">News</a>
+            <ul class="submenu">
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+            </ul></li>
+        <li class="m-5 sub"><a href="#contact">Contact</a>
+            <ul class="submenu">
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+            </ul></li>
+        <li class="m-5 sub"><a href="#about">About</a>
+            <ul class="submenu">
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+            </ul></li>
+      </ul>
+</div> -->
+
+
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div>
+         <label class="m-5">HTML
+             <ul style="list-style-type: none;">
+                 <li>Test</li>
+                 <li>Test</li>
+                 <li>Test</li>
+                 <li>Test</li>
+             </ul>
+         </label>
+         <label>CSS
+            <ul style="list-style-type: none;">
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+            </ul>
+         </label>
+         <label>JS
+            <ul style="list-style-type: none;">
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+            </ul>
+         </label>
+         <label>Angular
+            <ul style="list-style-type: none;">
+                <li style="padding-left: 0px;">Test</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+            </ul>
+         </label>
+         <label>HTML
+            <ul style="list-style-type: none;">
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+            </ul>   
+         </label>
+    </div>
+    <div class="card-body">
+        <div></div>
+    </div>
+    <div class="card-footer"></div>
+
+</div>
+
+<button class="open-button" (click)="openForm()">Chat</button>
+<div class="chat-popup"  *ngIf='isdisplay'>
+  <form class="form-container">
+    <div>
+        <h5>Chat</h5>
+    </div>
+    <label for="msg"><strong>Message</strong></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" (click)="closeForm()">Close</button>
+  </form>
+</div>
