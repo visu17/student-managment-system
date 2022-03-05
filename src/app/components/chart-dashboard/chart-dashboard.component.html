@@ -1,0 +1,26 @@
+<div class="m-4 d-flex">
+    <div class="w-100 card mt-2">
+      <div class="card-body">
+        <h4 class="card-title">Bar Chart</h4>
+        <canvas
+          baseChart
+          [data]="salesData"
+          [type]="'bar'"
+          [options]="chartOptions"
+        >
+        </canvas>
+      </div>
+    </div>
+    <div class="w-100 card mt-2 ml-5">
+      <div class="card-body">
+        <h4 class="card-title">Line Chart</h4>
+        <canvas
+          baseChart
+          [data]="salesData"
+          [type]="'line'"
+          [options]="chartOptions"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>

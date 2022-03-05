@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'studentDashboard';
+  isdisplay:boolean = true;
+
+  openForm(){
+    this.isdisplay =true;
+  }
+
+  closeForm(){
+    this.isdisplay =false;
+  }
 }

@@ -1,0 +1,83 @@
+<div class="p-2 row">
+    <div class="col-4 mt-5 table-bordered p-3 m-5">
+        <h4>Student Managment System</h4>
+        <form (submit)="!submitting && submitBatchDetails()">
+            <div class="form-group">
+                <label for="selection">Choose Batch</label>
+                <select class="form-control" [(ngModel)]="batchSelected" (change)="batchNumber($event)">
+                    <option>--Please Select Batch--</option>
+                    <option *ngFor="let batch of batches | keyvalue">{{batch.key}}</option> 
+                </select>
+                <div class="mt-2">
+                    <label for="selection">Choose Student</label>
+                    <select class="form-control">
+                        <option>--Please Select Student--</option>
+                        <option *ngFor="let batch of batches[batchSelected]">{{batch}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group mt-2">
+                <label for="selection">Posts in Portal</label>
+                <select class="form-control" name="email" id="selection">
+                    <option>--Please Select Post--</option>
+                    <option>Posted Lab</option>
+                    <option>Yet to Post</option>
+                    <option>Not Completed</option>
+                    <option>In Progress</option>
+                    <option>Not Intrested to post</option>
+                    <option>Others</option>
+                </select>
+            </div>
+            <div class="mb-4" name="message">
+                <label>Choose Attendance</label><br>
+                <input type="radio" name="class"><span class="m-2">Attended</span>
+                <input type="radio" name="class"><span class="m-2">Not Attended</span>
+            </div>
+            <div>
+                <button class="btn btn-success">Submit</button>
+            </div>
+            <div>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-7">
+        <table class="table table-bordered table-hover mt-5">
+            <caption>New York City Marathon Results 2013</caption>
+            <thead class="bg-info">
+                <tr>
+                    <th>Batch No</th>
+                    <th>Student Name</th>
+                    <th>Posts</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Batch-10</td>
+                    <td>Viswanadh</td>
+                    <td>Submitted</td>
+                    <td><span class="badge-success p-2 rounded">Attended</span>
+                        <span class="m-3">{{timeStamp | date:'MMM d, y, h:mm:ss a'}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Batch-10</td>
+                    <td>Viswanadh</td>
+                    <td>Not Submitted</td>
+                    <td><span class="badge-success p-2 rounded">Attended</span>
+                        <span class="m-3">{{timeStamp | date:'MMM d, y, h:mm:ss a'}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Batch-10</td>
+                    <td>Viswanadh</td>
+                    <td>Not Intrested</td>
+                    <td><span class="badge-danger p-2 rounded">Not Attended</span>
+                        <span class="m-3">{{timeStamp | date:'MMM d, y, h:mm:ss a'}}</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
