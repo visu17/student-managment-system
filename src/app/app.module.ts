@@ -8,12 +8,13 @@ import { NgChartsModule } from 'ng2-charts';
 import { ChartDashboardComponent } from './components/chart-dashboard/chart-dashboard.component';
 import { StudentRegistrationComponent } from './components/student-registration/student-registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChartDashboardComponent,
-    StudentRegistrationComponent
+    StudentRegistrationComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,9 +22,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ChartModule,
     NgChartsModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [DatePipe],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

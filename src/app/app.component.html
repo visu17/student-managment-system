@@ -6,18 +6,3 @@
     <app-chart-dashboard></app-chart-dashboard>
   </div>
 </div>
-
-<button class="open-button" (click)="openForm()">Chat</button>
-<div class="chat-popup" *ngIf="isdisplay">
-  <form class="form-container">
-    <div>
-      <h5>Chat</h5>
-    </div>
-    <label for="msg"><strong>Message</strong></label>
-    <textarea placeholder="Type message.." name="msg" required></textarea>
-    <button type="submit" class="btn">Send</button>
-    <button type="button" class="btn cancel" (click)="closeForm()">
-      Close
-    </button>
-  </form>
-</div>
